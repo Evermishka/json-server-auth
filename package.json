@@ -23,10 +23,11 @@
 		"test": "jest",
 		"test:file": "jest --testPathPattern",
 		"test:watch": "jest --watch --verbose false",
-		"release": "standard-version"
+		"release": "standard-version",
+    "start": "json-server db.json -m ./node_modules/json-server-auth"
 	},
 	"peerDependencies": {
-		"json-server": "*"
+		"json-server": "^0.16.3"
 	},
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
@@ -42,6 +43,7 @@
 		"@types/yargs": "^16.0.0",
 		"jest": "^27.0.6",
 		"json-server": "^0.16.3",
+		"json-server-auth": "^2.1.0",
 		"rimraf": "^3.0.2",
 		"standard-version": "^9.3.1",
 		"supertest": "^6.1.4",
