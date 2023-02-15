@@ -182,7 +182,7 @@
 			"name": "Привет, мир!",
 			"content": [
 				"<p>В этой части учебника мы изучаем собственно JavaScript, сам язык.</p><p>Но нам нужна рабочая среда для запуска наших скриптов, и, поскольку это онлайн-книга, то браузер будет хорошим выбором. В этой главе мы сократим количество специфичных для браузера команд (например, alert) до минимума, чтобы вы не тратили на них время, если планируете сосредоточиться на другой среде (например, Node.js). А на использовании JavaScript в браузере мы сосредоточимся в следующей части учебника.</p><p>Итак, сначала давайте посмотрим, как выполнить скрипт на странице. Для серверных сред (например, Node.js), вы можете выполнить скрипт с помощью команды типа 'node my.js'. Для браузера всё немного иначе.</p><h2>Тег «script»</h2><p>Программы на JavaScript могут быть вставлены в любое место HTML-документа с помощью тега  <code>&lt;script&gt;</code>.</p><p>Для примера:</p>",
-				"<pre class='prettyprint prettyprinted' style=''> <code><span class='dec'>&lt;!DOCTYPE HTML&gt;</span><span class='pln'></span>",
+				"<pre class='prettyprint prettyprinted' style=''><code><span class='dec'>&lt;!DOCTYPE HTML&gt;</span><span class='pln'></span>",
 				"<span class='tag'>&lt;html&gt;</span><span class='pln'></span>",
 				"",
 				"<span class='tag'>&lt;body&gt;</span><span class='pln'></span>",
@@ -199,28 +199,28 @@
 				"",
 				"<span class='tag'>&lt;/html&gt;</span></code></pre>",
 				"<p>Тег  <code>&lt;script&gt;</code> содержит JavaScript-код, который автоматически выполнится, когда браузер его обработает.</p><h2>Современная разметка</h2><p>Тег  <code>&lt;script&gt;</code> имеет несколько атрибутов, которые редко используются, но всё ещё могут встретиться в старом коде:</p><p><b>Атрибут type:  <code>&lt;script type=…&gt;</code></b></p><p>Старый стандарт HTML, HTML4, требовал наличия этого атрибута в теге  <code>&lt;script&gt;</code>. Обычно он имел значение  <code>type='text/javascript'</code>. На текущий момент этого больше не требуется. Более того, в современном стандарте HTML смысл этого атрибута полностью изменился. Теперь он может использоваться для JavaScript-модулей. Но это тема не для начального уровня, и о ней мы поговорим в другой части учебника.</p><p><b>Атрибут language:  <code>&lt;script language=…&gt;</code></b></p><p>Этот атрибут должен был задавать язык, на котором написан скрипт. Но так как JavaScript является языком по умолчанию, в этом атрибуте уже нет необходимости.</p><p><b>Обёртывание скрипта в HTML-комментарии.</b></p><p>В очень древних книгах и руководствах вы сможете найти комментарии внутри тега  <code>&lt;script&gt;</code>, например, такие:</p>",
-				"<pre class='prettyprint prettyprinted' style=''> <code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>type</span><span class='pun'>=</span><span class='atv'>'text/javascript'</span><span class='tag'>&gt;</span><span class='pun'>&lt;!--</span>",
+				"<pre class='prettyprint prettyprinted' style=''><code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>type</span><span class='pun'>=</span><span class='atv'>'text/javascript'</span><span class='tag'>&gt;</span><span class='pun'>&lt;!--</span>",
 				"<span class='pln'></span><span class='pun'>  ...</span><span class='pln'></span>",
 				"<span class='com'>//--&gt;</span><span class='tag'>&lt;/script&gt;</span></code></pre>",
 				"<p>Этот комментарий скрывал код JavaScript в старых браузерах, которые не знали, как обрабатывать тег <code>&lt;script&gt;</code>. Поскольку все браузеры, выпущенные за последние 15 лет, не содержат данной проблемы, такие комментарии уже не нужны. Если они есть, то это признак, что перед нами очень древний код.</p><h2>Внешние скрипты</h2><p>Если у вас много JavaScript-кода, вы можете поместить его в отдельный файл.</p><p>Файл скрипта можно подключить к HTML с помощью атрибута <code>src</code>:</p>",
-				"<pre class='prettyprint prettyprinted' style=''> <code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'/path/to/script.js'</span><span class='tag'>&gt;&lt;/script&gt;</span></code></pre>",
+				"<pre class='prettyprint prettyprinted' style=''><code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'/path/to/script.js'</span><span class='tag'>&gt;&lt;/script&gt;</span></code></pre>",
 				"<p>Здесь <code>/path/to/script.js</code>– это абсолютный путь до скрипта от корня сайта. Также можно указать относительный путь от текущей страницы. Например, <code>src='script.js'</code>или <code>src='./script.js'</code>будет означать, что файл <code>'script.js'</code>находится в текущей папке.</p><p>Можно указать и полный URL-адрес. Например:</p>",
-				"<pre class='prettyprint prettyprinted' style=''> <code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js'</span><span class='tag'>&gt;&lt;/script&gt;</span></code></pre>",
+				"<pre class='prettyprint prettyprinted' style=''><code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js'</span><span class='tag'>&gt;&lt;/script&gt;</span></code></pre>",
 				"<p>Для подключения нескольких скриптов используйте несколько тегов:</p>",
-				"<pre class='prettyprint prettyprinted' style=''> <code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'/js/script1.js'</span><span class='tag'>&gt;&lt;/script&gt;</span><span class='pln'></span>",
+				"<pre class='prettyprint prettyprinted' style=''><code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'/js/script1.js'</span><span class='tag'>&gt;&lt;/script&gt;</span><span class='pln'></span>",
 				"<span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'/js/script2.js'</span><span class='tag'>&gt;&lt;/script&gt;</span>",
 				"<span class='pln'>…</span></code></pre>",
 				"<div class='alert alert-info' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Info:'><path d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg><b>На заметку:</b></p><p>Как правило, только простейшие скрипты помещаются в HTML. Более сложные выделяются в отдельные файлы.</p><p>Польза отдельных файлов в том, что браузер загрузит скрипт отдельно и сможет хранить его в кеше.</p><p>Другие страницы, которые подключают тот же скрипт, смогут брать его из кеша вместо повторной загрузки из сети. И таким образом файл будет загружаться с сервера только один раз.</p><p>Это сокращает расход трафика и ускоряет загрузку страниц.</p></div><div class='alert alert-warning' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Warning:'><path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/></svg><b>Если атрибут <code>src</code>установлен, содержимое тега <code>&lt;script&gt;</code>будет игнорироваться.</b></p><p>В одном теге <code>&lt;script&gt;</code>нельзя использовать одновременно атрибут <code>src</code>и код внутри.</p><p>Нижеприведённый пример не работает:</p>",
-				"<pre class='prettyprint prettyprinted' style=''> <code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'file.js'</span><span class='tag'>&gt;</span>",
+				"<pre class='prettyprint prettyprinted' style=''><code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'file.js'</span><span class='tag'>&gt;</span>",
 				"<span class='pln'>  alert</span><span class='pun'>(</span><span class='lit'>1</span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// содержимое игнорируется, так как есть атрибут src</span><span class='pln'></span>",
 				"<span class='tag'>&lt;/script&gt;</span></code></pre>",
 				"<p>Нужно выбрать: либо внешний скрипт <code>&lt;script src='…'&gt;</code>, либо обычный код внутри тега <code>&lt;script&gt;</code>.</p><p>Вышеприведённый пример можно разделить на два скрипта:</p>",
-				"<pre class='prettyprint prettyprinted' style=''> <code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'file.js'</span><span class='tag'>&gt;&lt;/script&gt;</span><span class='pln'></span>",
+				"<pre class='prettyprint prettyprinted' style=''><code><span class='tag'>&lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'file.js'</span><span class='tag'>&gt;&lt;/script&gt;</span><span class='pln'></span>",
 				"",
 				"<span class='tag'>&lt;script&gt;</span>",
 				"<span class='pln'>  alert</span><span class='pun'>(</span><span class='lit'>1</span><span class='pun'>);</span><span class='pln'></span>",
 				"<span class='tag'>&lt;/script&gt;</span></code></pre>",
-				"<h2>Итого</h2><ul><li>Для добавления кода JavaScript на страницу используется тег <code>&lt;script&gt;</code></li><li>Атрибуты  <code>type</code> и <code>language</code> необязательны.</li><li>Скрипт во внешнем файле можно вставить с помощью <code>&lt;script src='path/to/script.js'&gt;&lt;/script&gt;</code>.</li></ul><p>Нам ещё многое предстоит изучить про браузерные скрипты и их взаимодействие со страницей. Но, как уже было сказано, эта часть учебника посвящена именно языку JavaScript, поэтому здесь мы постараемся не отвлекаться на детали реализации в браузере. Мы воспользуемся браузером для запуска JavaScript, это удобно для онлайн-демонстраций, но это только одна из платформ, на которых работает этот язык.</p>"
+				"</div><h2>Итого</h2><ul><li>Для добавления кода JavaScript на страницу используется тег <code>&lt;script&gt;</code></li><li>Атрибуты  <code>type</code> и <code>language</code> необязательны.</li><li>Скрипт во внешнем файле можно вставить с помощью <code>&lt;script src='path/to/script.js'&gt;&lt;/script&gt;</code>.</li></ul><p>Нам ещё многое предстоит изучить про браузерные скрипты и их взаимодействие со страницей. Но, как уже было сказано, эта часть учебника посвящена именно языку JavaScript, поэтому здесь мы постараемся не отвлекаться на детали реализации в браузере. Мы воспользуемся браузером для запуска JavaScript, это удобно для онлайн-демонстраций, но это только одна из платформ, на которых работает этот язык.</p>"
 			]
 		},
 		{
@@ -272,30 +272,114 @@
 		{
 			"category": "Основы JavaScript",
 			"id": "1",
-			"name": "Тест: Привет, мир!",
+			"name": "Тест: к главе 'Привет, мир!'",
 			"questions": [
 				{
 					"id": "1",
-					"question": "Вопрос 1",
+					"question": "С помощью какого тега можно вставить код программы в HTML-документ?",
 					"answers": [
 						{
 							"id": "1",
-							"text": "Вариант ответа 1"
+							"text": "<div>"
 						},
 						{
 							"id": "2",
-							"text": "Вариант ответа 2"
+							"text": "<code>"
 						},
 						{
 							"id": "3",
-							"text": "Вариант ответа 3"
+							"text": "<script>"
 						},
 						{
 							"id": "4",
-							"text": "Вариант ответа 4"
+							"text": "<body>"
 						}
 					],
-					"rightAnswer": ["1", "3"]
+					"rightAnswer": ["3"]
+				},
+        {
+					"id": "2",
+					"question": "Какие из этих атрибутов редко используются для тега <script>, но всё ещё могут встретиться в старом коде?",
+					"answers": [
+						{
+							"id": "1",
+							"text": "type"
+						},
+						{
+							"id": "2",
+							"text": "class"
+						},
+						{
+							"id": "3",
+							"text": "name"
+						},
+						{
+							"id": "4",
+							"text": "language"
+						}
+					],
+					"rightAnswer": ["1", "4"]
+				},
+        {
+					"id": "3",
+					"question": "Как правильно подключить отдельный файл с JavaScript-кодом в HTML-разметке?",
+					"answers": [
+						{
+							"id": "1",
+							"text": "<script url='/path/to/script.js'></script>"
+						},
+						{
+							"id": "2",
+							"text": "<script src='/path/to/script.js'></script>"
+						},
+						{
+							"id": "3",
+							"text": "<script link='/path/to/script.js'></script>"
+						},
+						{
+							"id": "4",
+							"text": "<script rel='/path/to/script.js'></script>"
+						}
+					],
+					"rightAnswer": ["2"]
+				},
+        {
+					"id": "4",
+					"question": "Будет игнорироваться содержимое тега script, если атрибут src установлен?",
+					"answers": [
+						{
+							"id": "1",
+							"text": "Да"
+						},
+						{
+							"id": "2",
+							"text": "Нет"
+						}
+					],
+					"rightAnswer": ["1"]
+				},
+        {
+					"id": "5",
+					"question": "Почему лучше подключать скрипты отдельными файлами, а не размещать их внутри тега <script>?",
+					"answers": [
+						{
+							"id": "1",
+							"text": "Это экономит нервы программиста"
+						},
+						{
+							"id": "2",
+							"text": "Это сокращает расход трафика посетителя страницы"
+						},
+						{
+							"id": "3",
+							"text": "Это ускоряет загрузку страниц"
+						},
+						{
+							"id": "4",
+							"text": "Это упрощает написание скрипта"
+						}
+					],
+					"rightAnswer": ["2", "3"]
 				}
 			]
 		}
@@ -307,12 +391,27 @@
 			"name": "Задачи: Привет, мир!",
 			"list": [
 				{
-					"content": "Текст задачи №1",
-					"solution": "Текст решения задачи №1"
+					"content": [
+            "<h2>Вызвать alert</h2><p>Создайте страницу, которая отобразит сообщение «Я JavaScript!».</p><p>Выполните это задание в песочнице, либо на вашем жёстком диске, где – неважно, главное – проверьте, что она работает.</p><a href='https://ru.js.cx/task/hello-alert/solution/'>Демо в новом окне</a>"
+          ],
+					"solution": [
+            "<a href='https://plnkr.co/edit/VJWJ5AN62rVfGUds?p=preview'>Открыть решение в песочнице.</a>"
+          ]
 				},
 				{
-					"content": "Текст задачи №2",
-					"solution": "Текст решения задачи №2"
+					"content": [
+            "<h2>Покажите сообщение с помощью внешнего скрипта</h2><p>Возьмите решение предыдущей задачи Вызвать alert, и измените его. Извлеките содержимое скрипта во внешний файл alert.js, лежащий в той же папке.</p><p>Откройте страницу, убедитесь, что оповещение работает.</p>"
+          ],
+					"solution": [
+            "<p>HTML-код:</p>",
+            "<pre class='prettyprint prettyprinted' style=''></pre><code><span class='dec'>&lt;!DOCTYPE html&gt;</span><span class='pln'></span>",
+            "<span class='tag'>  &lt;html&gt;</span><span class='pln'></span>",
+            "<span class='tag'>  &lt;body&gt;</span><span class='pln'></span>",
+            "<span class='tag'>    &lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'alert.js'</span><span class='tag'>&gt;&lt;/script&gt;</span><span class='pln'></span>",
+            "<span class='tag'>  &lt;/body&gt;</span><span class='pln'></span>",
+            "<span class='tag'>  &lt;/html&gt;</span></code></pre>",
+            "<p>Для файла <code>alert.js</code> в той же папке:</p>"
+          ]
 				}
 			]
 		}
