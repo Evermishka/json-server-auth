@@ -29,32 +29,9 @@
       ]
     },
     {
-      "email": "test@email.com",
-      "password": "$2a$10$G10BeBGZxd9ImlYv4w2n9OUpPVqYL9jyUreCugtkz90/Zz3wYiAXC",
-      "name": "tret",
-      "place": "lesson",
-      "id": "VFQrF2i"
-    },
-    {
-      "email": "test1@email.com",
-      "password": "$2a$10$VfmKfim/1CBSoHuv2JbTG.ii6kl6K179TevTbLp2v86loSx22vtBG",
-      "name": "thdh",
-      "place": "lesson",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "3wEsFK2"
-    },
-    {
-      "email": "test3@email.com",
-      "password": "$2a$10$1VcII6MbdefX2UZ/tZWeOukd5wg8JSJBHvGqqwedqUOtOO6g4IZqm",
-      "name": "ytr",
+      "email": "test7@email.com",
+      "password": "$2a$10$S8mK6gBCCm/EuYKH3ve2s.etQXnxa2KChwtG.hTCu.R/iMi2zv1xi",
+      "name": "ggg",
       "place": "lessons",
       "done": {
         "lessons": [
@@ -65,14 +42,7 @@
         "tests": [],
         "tasks": []
       },
-      "id": "yXdTU5D"
-    },
-    {
-      "email": "test4@email.com",
-      "password": "$2a$10$YKQzQADsrf7hbjv9P8DiduzTgZhT9xC48kgSTcV0POCvFz/oKfNMa",
-      "name": "121",
-      "place": "lessons",
-      "done": {
+      "favourites": {
         "lessons": [
           {
             "id": 1
@@ -81,7 +51,7 @@
         "tests": [],
         "tasks": []
       },
-      "id": "UJg1xlH"
+      "id": "dgPfldW"
     }
   ],
   "category": [
