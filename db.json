@@ -27,225 +27,6 @@
         "lessons",
         "1"
       ]
-    },
-    {
-      "email": "test@email.com",
-      "password": "$2a$10$G10BeBGZxd9ImlYv4w2n9OUpPVqYL9jyUreCugtkz90/Zz3wYiAXC",
-      "name": "tret",
-      "place": "lesson",
-      "id": "VFQrF2i"
-    },
-    {
-      "email": "test1@email.com",
-      "password": "$2a$10$VfmKfim/1CBSoHuv2JbTG.ii6kl6K179TevTbLp2v86loSx22vtBG",
-      "name": "thdh",
-      "place": "lesson",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "3wEsFK2"
-    },
-    {
-      "email": "test3@email.com",
-      "password": "$2a$10$1VcII6MbdefX2UZ/tZWeOukd5wg8JSJBHvGqqwedqUOtOO6g4IZqm",
-      "name": "ytr",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "yXdTU5D"
-    },
-    {
-      "email": "test4@email.com",
-      "password": "$2a$10$YKQzQADsrf7hbjv9P8DiduzTgZhT9xC48kgSTcV0POCvFz/oKfNMa",
-      "name": "121",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "UJg1xlH"
-    },
-    {
-      "email": "evermishka@yandex.ru",
-      "password": "$2a$10$l482VyNbb0BnOOR/Gu/jMeHtSDo1z10jeZekT/SJi3jKNnnokkunm",
-      "name": "Евгения",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "favourites": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "Iq0xGxp"
-    },
-    {
-      "email": "evermishka5@yandex.ru",
-      "password": "$2a$10$RXVga4lSofHdba0pIbNYW.lJPLLiQS03phGQ7EXQhCWkVi0F6iJwG",
-      "name": "Евгения",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "favourites": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "3zQX-kg"
-    },
-    {
-      "email": "evermishka22@yandex.ru",
-      "password": "$2a$10$PW3FZ.pxEF7xZsz735TH/uXqFXtuHCHermq5zdr6RZzliDtJUPbFq",
-      "name": "Евгения",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "favourites": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "ltdTRkj"
-    },
-    {
-      "email": "evermishka666@yandex.ru",
-      "password": "$2a$10$iYm6tmiV/CzMyVnVDWUUKOOd56noo5iVs954jTgWxWykPmHCvt9CO",
-      "name": "Евгения",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "favourites": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "jjpkPS-"
-    },
-    {
-      "email": "evermishka9999@yandex.ru",
-      "password": "$2a$10$o0STSLK/pUFFzHk72/yCHeQpTLg2ev0c.MgvaCPDP82A6wqahi3ei",
-      "name": "Евгения",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "favourites": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "XEMhQv9"
-    },
-    {
-      "email": "evermishka777@yandex.ru",
-      "password": "$2a$10$3faOODL7AyClLOUNTWv3S.3e0778fkj8PZDovr/fZRl8uw1ag32lW",
-      "name": "Евгения",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "favourites": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "THnjzpB"
-    },
-    {
-      "email": "evermishka333@yandex.ru",
-      "password": "$2a$10$or/DKlORTfNCwOqix3UKuu1AUTsBLnH8XHZYF/fxh2EICCye8fBmu",
-      "name": "",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "favourites": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "7NEG7Eh"
-    },
-    {
-      "email": "evermishka888@yandex.ru",
-      "password": "$2a$10$lhyXEesjefcTuyXof2ECdOJe5JIWOhpbAt6lTYn6rYFrrGnTSO3di",
-      "name": "Евгения",
-      "place": "lessons",
-      "done": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "favourites": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "PJKmtl8"
     }
   ],
   "category": [
@@ -352,6 +133,19 @@
         "<span class='pln'>  alert</span><span class='pun'>(</span><span class='lit'>1</span><span class='pun'>);</span><span class='pln'></span>",
         "<span class='tag'>&lt;/script&gt;</span></code></pre>",
         "</div><h2>Итого</h2><ul><li>Для добавления кода JavaScript на страницу используется тег <code>&lt;script&gt;</code></li><li>Атрибуты  <code>type</code> и <code>language</code> необязательны.</li><li>Скрипт во внешнем файле можно вставить с помощью <code>&lt;script src='path/to/script.js'&gt;&lt;/script&gt;</code>.</li></ul><p>Нам ещё многое предстоит изучить про браузерные скрипты и их взаимодействие со страницей. Но, как уже было сказано, эта часть учебника посвящена именно языку JavaScript, поэтому здесь мы постараемся не отвлекаться на детали реализации в браузере. Мы воспользуемся браузером для запуска JavaScript, это удобно для онлайн-демонстраций, но это только одна из платформ, на которых работает этот язык.</p>"
+
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "userName": "Опознанный Енот",
+          "content": "Хороший урок. Спасибо!"
+        },
+        {
+          "id": 2,
+          "userName": "Tot",
+          "content": "Fantastic lesson!"
+        }
       ]
     },
     {
@@ -483,7 +277,6 @@
     {
       "category": "Основы JavaScript",
       "id": "1",
-      "name": "Тест к главе 'Привет, мир!'",
       "questions": [
         {
           "id": "1",
@@ -942,14 +735,6 @@
           ]
         }
       ]
-    }  
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "lesson": "1",
-      "user": "1",
-      "content": "Текст комментария"
-    }
+    } 
   ]
 }
