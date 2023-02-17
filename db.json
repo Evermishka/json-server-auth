@@ -311,28 +311,10 @@
           }
         ]
       },
-      "place": "lesson"
-    },
-    {
-      "email": "test7@email.com",
-      "password": "$2a$10$nohTE6hH2BW8a7SOtpKq3eQ08ZvX6xoSh/JAff59fcbKCPThlKzWO",
-      "name": "Tot",
-      "place": "lessons",
-      "done": {
-        "lessons": [
-          {
-            "id": 1
-          }
-        ],
-        "tests": [],
-        "tasks": []
-      },
-      "favourites": {
-        "lessons": [],
-        "tests": [],
-        "tasks": []
-      },
-      "id": "PFq6tBf"
+      "place": [
+        "lessons",
+        "1"
+      ]
     }
   ],
   "category": [
@@ -346,39 +328,27 @@
         },
         {
           "id": "2",
-          "name": "Структура кода"
-        },
-        {
-          "id": "3",
           "name": "Переменные"
         }
       ],
       "tests": [
         {
           "id": "1",
-          "name": "Тест: Привет, мир!"
+          "name": "Тест к главе 'Привет, мир!'"
         },
         {
           "id": "2",
-          "name": "Тест: Структура кода"
-        },
-        {
-          "id": "3",
-          "name": "Тест: Переменные"
+          "name": "Тест к главе 'Переменные'"
         }
       ],
       "tasks": [
         {
           "id": "1",
-          "name": "Задачи: Привет, мир!"
+          "name": "Задачи к главе 'Привет, мир!'"
         },
         {
           "id": "2",
-          "name": "Задачи: Структура кода"
-        },
-        {
-          "id": "3",
-          "name": "Задачи: Переменные"
+          "name": "Задачи к главе 'Переменные'"
         }
       ]
     },
@@ -387,44 +357,20 @@
       "name": "Типы данных",
       "lessons": [
         {
-          "id": "4",
+          "id": "3",
           "name": "Методы примитивов"
-        },
-        {
-          "id": "5",
-          "name": "Числа"
-        },
-        {
-          "id": "6",
-          "name": "Строки"
         }
       ],
       "tests": [
         {
-          "id": "4",
-          "name": "Тест: Методы примитивов"
-        },
-        {
-          "id": "5",
-          "name": "Тест: Числа"
-        },
-        {
-          "id": "6",
-          "name": "Тест: Строки"
+          "id": "3",
+          "name": "Тест к главе 'Методы примитивов'"
         }
       ],
       "tasks": [
         {
-          "id": "4",
-          "name": "Задачи: Методы примитивов"
-        },
-        {
-          "id": "5",
-          "name": "Задачи: Числа"
-        },
-        {
-          "id": "6",
-          "name": "Задачи: Строки"
+          "id": "3",
+          "name": "Задачи к главе 'Методы примитивов'"
         }
       ]
     }
@@ -475,6 +421,7 @@
         "<span class='pln'>  alert</span><span class='pun'>(</span><span class='lit'>1</span><span class='pun'>);</span><span class='pln'></span>",
         "<span class='tag'>&lt;/script&gt;</span></code></pre>",
         "</div><h2>Итого</h2><ul><li>Для добавления кода JavaScript на страницу используется тег <code>&lt;script&gt;</code></li><li>Атрибуты  <code>type</code> и <code>language</code> необязательны.</li><li>Скрипт во внешнем файле можно вставить с помощью <code>&lt;script src='path/to/script.js'&gt;&lt;/script&gt;</code>.</li></ul><p>Нам ещё многое предстоит изучить про браузерные скрипты и их взаимодействие со страницей. Но, как уже было сказано, эта часть учебника посвящена именно языку JavaScript, поэтому здесь мы постараемся не отвлекаться на детали реализации в браузере. Мы воспользуемся браузером для запуска JavaScript, это удобно для онлайн-демонстраций, но это только одна из платформ, на которых работает этот язык.</p>"
+
       ],
       "comments": [
         {
@@ -492,45 +439,125 @@
     {
       "category": "Основы JavaScript",
       "id": 2,
-      "name": "Структура кода",
+      "name": "Переменные",
       "content": [
-        {
-          "tag": "p",
-          "class": "",
-          "text": "В этой части учебника мы изучаем собственно JavaScript, сам язык."
-        },
-        {
-          "tag": "p",
-          "class": "",
-          "text": "Но нам нужна рабочая среда для запуска наших скриптов, и, поскольку это онлайн-книга, то браузер будет хорошим выбором. В этой главе мы сократим количество специфичных для браузера команд (например, alert) до минимума, чтобы вы не тратили на них время, если планируете сосредоточиться на другой среде (например, Node.js). А на использовании JavaScript в браузере мы сосредоточимся в следующей части учебника."
-        },
-        {
-          "tag": "p",
-          "class": "",
-          "text": "Итак, сначала давайте посмотрим, как выполнить скрипт на странице. Для серверных сред (например, Node.js), вы можете выполнить скрипт с помощью команды типа 'node my.js' Для браузера всё немного иначе."
-        }
+        "<p>JavaScript-приложению обычно нужно работать с информацией. Например:</p><ol><li>Интернет-магазин – информация может включать продаваемые товары и корзину покупок.</li><li>Чат – информация может включать пользователей, сообщения и многое другое.</li></ol><p>Переменные используются для хранения этой информации.</p><h2>Переменная</h2><p>Переменная – это «именованное хранилище» для данных. Мы можем использовать переменные для хранения товаров, посетителей и других данных.</p><p>Для создания переменной в JavaScript используйте ключевое слово<code>let</code>.</p><p>Приведённая ниже инструкция создаёт (другими словами: объявляет или определяет) переменную с именем «message»:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> message</span><span class='pun'>;</span></code></pre>",
+        "<p>Теперь можно поместить в неё данные, используя оператор присваивания =:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> message</span><span class='pun'>;</span>",
+        "<span class='pln'>message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello'</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// сохранить строку 'Hello' в переменной с именем message</span></code></pre>",
+        "<p>Строка сохраняется в области памяти, связанной с переменной. Мы можем получить к ней доступ, используя имя переменной:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> message</span><span class='pun'>;</span>",
+        "<span class='pln'>message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello!'</span><span class='pun'>;</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>message</span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// показывает содержимое переменной</span></code></pre>",
+        "<p>Для краткости можно совместить объявление переменной и запись данных в одну строку:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello!'</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// определяем переменную и присваиваем ей значение</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>message</span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// Hello!</span></code></pre>",
+        "<p>Мы также можем объявить несколько переменных в одной строке:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> user </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'John'</span><span class='pun'>,</span><span class='pln'> age </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>25</span><span class='pun'>,</span><span class='pln'> message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello'</span><span class='pun'>;</span></code></pre>",
+        "<p>Такой способ может показаться короче, но мы не рекомендуем его. Для лучшей читаемости объявляйте каждую переменную на новой строке.</p><p>Многострочный вариант немного длиннее, но легче для чтения:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> user </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'John'</span><span class='pun'>;</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> age </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>25</span><span class='pun'>;</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello'</span><span class='pun'>;</span></code></pre>",
+        "<p>Некоторые люди также определяют несколько переменных в таком вот многострочном стиле:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> user </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'John'</span><span class='pun'>,</span>",
+        "<span class='pln'>age </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>25</span><span class='pun'>,</span>",
+        "<span class='pln'>message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello'</span><span class='pun'>;</span></code></pre>",
+        "<p>…Или даже с запятой в начале строки:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> user </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'John'</span><span class='pln'></span>",
+        "<span class='pun'>  ,</span><span class='pln'> age </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>25</span><span class='pln'></span>",
+        "<span class='pun'>  ,</span><span class='pln'> message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello'</span><span class='pun'>;</span></code></pre>",
+        "<p>В принципе, все эти варианты работают одинаково. Так что это вопрос личного вкуса и эстетики.</p><div class='alert alert-info' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Info:'><path d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg><b>var вместо let</b></p><p>В старых скриптах вы также можете найти другое ключевое слово: var вместо let:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>var</span><span class='pln'> message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello'</span><span class='pun'>;</span></code></pre>",
+        "<p>Ключевое слово var – почти то же самое, что и let. Оно объявляет переменную, но немного по-другому, «устаревшим» способом.</p><p>Есть тонкие различия между let и var, но они пока не имеют для нас значения. Мы подробно рассмотрим их в главе Устаревшее ключевое слово 'var'.</p></div><h2>Аналогия из жизни</h2><p>Мы легко поймём концепцию «переменной», если представим её в виде «коробки» для данных с уникальным названием на ней.</p><p>Например, переменную message можно представить как коробку с названием 'message' и значением 'Hello!' внутри:</p><p>Мы можем положить любое значение в коробку.</p><p>Мы также можем изменить его столько раз, сколько захотим:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> message</span><span class='pun'>;</span>",
+        "<span class='pln'>message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello!'</span><span class='pun'>;</span>",
+        "<span class='pln'>message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'World!'</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// значение изменено  </span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>message</span><span class='pun'>);</span></code></pre>",
+        "<p>При изменении значения старые данные удаляются из переменной:</p><p>Мы также можем объявить две переменные и скопировать данные из одной в другую.</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> hello </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Hello world!'</span><span class='pun'>;</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> message</span><span class='pun'>;</span><span class='pln'></span><span class='com'>// копируем значение 'Hello world' из переменной hello в переменную message</span>",
+        "<span class='pln'>message </span><span class='pun'>=</span><span class='pln'> hello</span><span class='pun'>;</span><span class='pln'></span><span class='com'>// теперь две переменные содержат одинаковые данные</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>hello</span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// Hello world!</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>message</span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// Hello world!</span></code></pre>",
+        "<div class='alert alert-warning' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Warning:'><path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/></svg><b>Повторное объявление вызывает ошибку</b></p><p>Переменная может быть объявлена только один раз.</p><p>Повторное объявление той же переменной является ошибкой:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Это'</span><span class='pun'>;</span><span class='pln'></span><span class='com'>// повторение ключевого слова 'let' приводит к ошибке</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> message </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Другое'</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// SyntaxError: 'message' has already been declared</span></code></pre>",
+        "<p>Поэтому следует объявлять переменную только один раз и затем использовать её уже без <code>let</code>.</p></div><div class='alert alert-info' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Info:'><path d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg><b>Функциональные языки программирования</b></p><p>Примечательно, что существуют функциональные языки программирования, такие как Scala или Erlang, которые запрещают изменять значение переменной.</p><p>В таких языках однажды сохранённое «в коробку» значение остаётся там навсегда. Если нам нужно сохранить что-то другое, язык заставляет нас создать новую коробку (объявить новую переменную). Мы не можем использовать старую переменную.</p><p>Хотя на первый взгляд это может показаться немного странным, эти языки вполне подходят для серьёзной разработки. Более того, есть такая область, как параллельные вычисления, где это ограничение даёт определённые преимущества. Изучение такого языка (даже если вы не планируете использовать его в ближайшее время) рекомендуется для расширения кругозора.</p></div><h2>Имена переменных</h2><p>В JavaScript есть два ограничения, касающиеся имён переменных:</p><ol><li>Имя переменной должно содержать только буквы, цифры или символы $ и _.</li><li>Первый символ не должен быть цифрой.</li></ol><p>Примеры допустимых имён:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> userName</span><span class='pun'>;</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> test123</span><span class='pun'>;</span></code></pre>",
+        " <p>Если имя содержит несколько слов, обычно используется верблюжья нотация, то есть, слова следуют одно за другим, где каждое следующее слово начинается с заглавной буквы: <code>myVeryLongName</code>.</p><p>Самое интересное – знак доллара '$' и подчёркивание '_' также можно использовать в названиях. Это обычные символы, как и буквы, без какого-либо особого значения.</p><p>Эти имена являются допустимыми:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> $ </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>1</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// объявили переменную с именем '$'</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> _ </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>2</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// а теперь переменную с именем '_'      </span><span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>$ </span><span class='pun'>+</span><span class='pln'> _</span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// 3</span></code></pre>",
+        "<p>Примеры неправильных имён переменных:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> </span><span class='lit'>1a</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// не может начинаться с цифры</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> </span><span class='kwd'>my</span><span class='pun'>-</span><span class='pln'>name</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// дефис '-' не разрешён в имени</span></code></pre>",
+        "<div class='alert alert-info' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Info:'><path d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg><b>Регистр имеет значение</b></p><p>Переменные с именами<code>apple</code>и<code>APPLE</code>– это две разные переменные.</p></div><div class='alert alert-info' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Info:'><path d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg><b>Нелатинские буквы разрешены, но не рекомендуются</b></p><p>Можно использовать любой язык, включая кириллицу или даже иероглифы, например:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> </span><span class='pun'>имя</span><span class='pln'> </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'...'</span><span class='pun'>;</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> </span><span class='pun'>我</span><span class='pln'> </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'...'</span><span class='pun'>;</span></code></pre>",
+        "<p>Технически здесь нет ошибки, такие имена разрешены, но есть международная традиция использовать английский язык в именах переменных. Даже если мы пишем небольшой скрипт, у него может быть долгая жизнь впереди. Людям из других стран, возможно, придётся прочесть его не один раз.</p></div><div class='alert alert-warning' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Warning:'><path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/></svg><b>Зарезервированные имена</b></p><p>Существует список зарезервированных слов, которые нельзя использовать в качестве имён переменных, потому что они используются самим языком.</p><p>Например:<code>let</code>,<code>class</code>,<code>return</code>и<code>function</code>зарезервированы.</p><p>Приведённый ниже код даёт синтаксическую ошибку:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> </span><span class='kwd'>let</span><span class='pln'> </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>5</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// нельзя назвать переменную 'let', ошибка!</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> </span><span class='kwd'>return</span><span class='pln'> </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>5</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// также нельзя назвать переменную 'return', ошибка!</span></code></pre>",
+        "</div><div class='alert alert-warning' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Warning:'><path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/></svg><b>Создание переменной без использования <code>use strict</code></b></p><p>Обычно нам нужно определить переменную перед её использованием. Но в старые времена было технически возможно создать переменную простым присвоением значения без использования <code>let</code>. Это все ещё работает, если мы не включаем <code>use strict</code> в наших файлах, чтобы обеспечить совместимость со старыми скриптами.</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='com'>// заметка: 'use strict' в этом примере не используется</span>",
+        "<span class='pln'>num </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>5</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// если переменная 'num' раньше не существовала, она создаётся</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>num</span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// 5</span></code></pre>",
+        "<p>Это плохая практика, которая приводит к ошибке в строгом режиме:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='str'>'use strict'</span><span class='pun'>;</span>",
+        "<span class='pln'>num </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>5</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// ошибка: num is not defined</span></code></pre>",
+        "</div><h2>Константы</h2><p>Чтобы объявить константную, то есть, неизменяемую переменную, используйте <code>const</code> вместо <code>let</code>:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>const</span><span class='pln'> myBirthday </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'18.04.1982'</span><span class='pun'>;</span></code></pre>",
+        "<p>Переменные, объявленные с помощью <code>const</code>, называются «константами». Их нельзя изменить. Попытка сделать это приведёт к ошибке:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>const</span><span class='pln'> myBirthday </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'18.04.1982'</span><span class='pun'>;</span>",
+        "<span class='pln'>myBirthday </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'01.01.2001'</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// ошибка, константу нельзя перезаписать!</span></code></pre>",
+        "<p>Если программист уверен, что переменная никогда не будет меняться, он может гарантировать это и наглядно донести до каждого, объявив её через <code>const</code>.</p><h3>Константы в верхнем регистре</h3><p>Широко распространена практика использования констант в качестве псевдонимов для трудно запоминаемых значений, которые известны до начала исполнения скрипта.</p><p>Названия таких констант пишутся с использованием заглавных букв и подчёркивания.</p><p>Например, сделаем константы для различных цветов в «шестнадцатеричном формате»:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>const</span><span class='pln'> COLOR_RED </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'#F00'</span><span class='pun'>;</span><span class='pln'></span>",
+        "<span class='kwd'>const</span><span class='pln'> COLOR_GREEN </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'#0F0'</span><span class='pun'>;</span><span class='pln'></span>",
+        "<span class='kwd'>const</span><span class='pln'> COLOR_BLUE </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'#00F'</span><span class='pun'>;</span><span class='pln'></span>",
+        "<span class='kwd'>const</span><span class='pln'> COLOR_ORANGE </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'#FF7F00'</span><span class='pun'>;</span><span class='pln'> </span>",
+        "<span class='com'>// ...когда нам нужно выбрать цвет</span><span class='pln'></span>",
+        "<span class='kwd'>let</span><span class='pln'> color </span><span class='pun'>=</span><span class='pln'> COLOR_ORANGE</span><span class='pun'>;</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>color</span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// #FF7F00</span></code></pre>",
+        "<p>Преимущества:</p><ul><li><code>COLOR_ORANGE</code> гораздо легче запомнить, чем <code>#FF7F00</code>.</li><li>Гораздо легче допустить ошибку при вводе <code>#FF7F00</code>, чем при вводе <code>COLOR_ORANGE</code>.</li><li>При чтении кода <code>COLOR_ORANGE</code> намного понятнее, чем <code>#FF7F00</code>.</li></ul><p>Когда мы должны использовать для констант заглавные буквы, а когда называть их нормально? Давайте разберёмся и с этим.</p><p>Название «константа» просто означает, что значение переменной никогда не меняется. Но есть константы, которые известны до выполнения (например, шестнадцатеричное значение для красного цвета), а есть константы, которые вычисляются во время выполнения сценария, но не изменяются после их первоначального назначения.</p><p>Например:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>const</span><span class='pln'> pageLoadTime </span><span class='pun'>=</span><span class='pln'> </span><span class='com'>/* время, потраченное на загрузку веб-страницы */</span><span class='pun'>;</span></code></pre>",
+        "<p>Значение <code>pageLoadTime</code> неизвестно до загрузки страницы, поэтому её имя записано обычными, а не прописными буквами. Но это всё ещё константа, потому что она не изменяется после назначения.</p><p>Другими словами, константы с именами, записанными заглавными буквами, используются только как псевдонимы для «жёстко закодированных» значений.</p><h2>Придумывайте правильные имена</h2><p>В разговоре о переменных необходимо упомянуть, что есть ещё одна чрезвычайно важная вещь.</p><p>Название переменной должно иметь ясный и понятный смысл, говорить о том, какие данные в ней хранятся.</p><p>Именование переменных – это один из самых важных и сложных навыков в программировании. Быстрый взгляд на имена переменных может показать, какой код был написан новичком, а какой – опытным разработчиком.</p><p>В реальном проекте большая часть времени тратится на изменение и расширение существующей кодовой базы, а не на написание чего-то совершенно нового с нуля. Когда мы возвращаемся к коду после какого-то промежутка времени, гораздо легче найти информацию, которая хорошо размечена. Или, другими словами, когда переменные имеют хорошие имена.</p><p>Пожалуйста, потратьте время на обдумывание правильного имени переменной перед её объявлением. Делайте так, и будете вознаграждены.</p><p>Несколько хороших правил:</p><ul><li>Используйте легко читаемые имена, такие как <code>userName</code >или <code>shoppingCart</code>.</li><li>Избегайте использования аббревиатур или коротких имён, таких как <code>a</code>, <code>b</code>, <code>c</code>, за исключением тех случаев, когда вы точно знаете, что так нужно.</li><li>Делайте имена максимально описательными и лаконичными. Примеры плохих имён: <code>data</code> и <code>value</code>. Такие имена ничего не говорят. Их можно использовать только в том случае, если из контекста кода очевидно, какие данные хранит переменная.</li><li>Договоритесь с вашей командой об используемых терминах. Если посетитель сайта называется «user», тогда мы должны называть связанные с ним переменные <code>currentUser</code> или <code>newUser</code>, а не, к примеру, <code>currentVisitor</code> или <code>newManInTown</code>.</li></ul><p>Звучит просто? Действительно, это так, но на практике для создания описательных и кратких имён переменных зачастую требуется подумать. Действуйте.</p><div class='alert alert-info' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Info:'><path d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg><b>Повторно использовать или создавать новую переменную?</b></p><p>И последняя заметка. Есть ленивые программисты, которые вместо объявления новых переменных повторно используют существующие.</p><p>В результате их переменные похожи на коробки, в которые люди бросают разные предметы, не меняя на них этикетки. Что сейчас находится внутри коробки? Кто знает? Нам необходимо подойти поближе и проверить.</p><p>Такие программисты немного экономят на объявлении переменных, но теряют в десять раз больше при отладке.</p><p>Дополнительная переменная – это добро, а не зло.</p><p>Современные JavaScript-минификаторы и браузеры оптимизируют код достаточно хорошо, поэтому он не создаёт проблем с производительностью. Использование разных переменных для разных значений может даже помочь движку оптимизировать ваш код.</p></div><h2>Итого</h2><p>Мы можем объявить переменные для хранения данных с помощью ключевых слов <code>var</code>, <code>let</code> или <code>const</code>.</p><ul><li><code>let</code> – это современный способ объявления.</li><li><code>var</code> – это устаревший способ объявления. Обычно мы вообще не используем его, но мы рассмотрим тонкие отличия от <code>let</code> в главе Устаревшее ключевое слово 'var' на случай, если это всё-таки вам понадобится.</li><li><code>const</code> – похоже на <code>let</code>, но значение переменной не может изменяться.</li></ul><p>Переменные должны быть названы таким образом, чтобы мы могли легко понять, что у них внутри.</p>"
       ]
     },
     {
-      "category": "Основы JavaScript",
+      "category": "Типы данных",
       "id": 3,
-      "name": "Переменные",
+      "name": "Методы примитивов",
       "content": [
-        {
-          "tag": "p",
-          "class": "",
-          "text": "В этой части учебника мы изучаем собственно JavaScript, сам язык."
-        },
-        {
-          "tag": "p",
-          "class": "",
-          "text": "Но нам нужна рабочая среда для запуска наших скриптов, и, поскольку это онлайн-книга, то браузер будет хорошим выбором. В этой главе мы сократим количество специфичных для браузера команд (например, alert) до минимума, чтобы вы не тратили на них время, если планируете сосредоточиться на другой среде (например, Node.js). А на использовании JavaScript в браузере мы сосредоточимся в следующей части учебника."
-        },
-        {
-          "tag": "p",
-          "class": "",
-          "text": "Итак, сначала давайте посмотрим, как выполнить скрипт на странице. Для серверных сред (например, Node.js), вы можете выполнить скрипт с помощью команды типа 'node my.js' Для браузера всё немного иначе."
-        }
+        "<p>JavaScript позволяет нам работать с примитивными типами данных – строками, числами и т.д., как будто они являются объектами. У них есть и методы. Мы изучим их позже, а сначала разберём, как это всё работает, потому что, конечно, примитивы – не объекты.</p><p>Давайте взглянем на ключевые различия между примитивами и объектами.</p><p>Примитив</p><ul><li>Это – значение «примитивного» типа.</li><li>Есть 7 примитивных типов: <code>string, number, boolean, symbol, null, undefined и bigint.</code></li></ul><p> Объект</p><ul><li>Может хранить множество значений как свойства.</li><li>Объявляется при помощи фигурных скобок <code>{}</code>, например: <code>{name: 'Рома', age: 30}</code>. В JavaScript есть и другие виды объектов: например, функции тоже являются объектами.</li></ul><p>Одна из лучших особенностей объектов – это то, что мы можем хранить функцию как одно из свойств объекта.</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> roma </span><span class='pun'>=</span><span class='pln'> </span><span class='pun'>{</span>",
+        "<span class='pln'>  name</span><span class='pun'>:</span><span class='pln'> </span><span class='str'>'Рома'</span><span class='pun'>,</span>",
+        "<span class='pln'>  sayHi</span><span class='pun'>:</span><span class='pln'> </span><span class='kwd'>function</span><span class='pun'>()</span><span class='pln'> </span><span class='pun'>{</span>",
+        "<span class='pln'>    alert</span><span class='pun'>(</span><span class='str'>'Привет, дружище!'</span><span class='pun'>);</span><span class='pln'></span>",
+        "<span class='pun'>  }</span><span class='pln'></span>",
+        "<span class='pun'>};</span>",
+        "<span class='pln'>roma</span><span class='pun'>.</span><span class='pln'>sayHi</span><span class='pun'>();</span><span class='pln'> </span><span class='com'>// Привет, дружище!</span></code></pre>",
+        "<p>Здесь мы создали объект <code>roma</code> с методом <code>sayHi</code>.</p><p>Существует множество встроенных объектов. Например, те, которые работают с датами, ошибками, HTML-элементами и т.д. Они имеют различные свойства и методы.</p><p>Однако у этих возможностей есть обратная сторона!</p><p>Объекты «тяжелее» примитивов. Они нуждаются в дополнительных ресурсах для поддержания внутренней структуры.</p><h2>Примитив как объект</h2><p>Вот парадокс, с которым столкнулся создатель JavaScript:</p><ul><li>Есть много всего, что хотелось бы сделать с примитивами, такими как строка или число. Было бы замечательно, если бы мы могли обращаться к ним при помощи методов.</li><li>Примитивы должны быть лёгкими и быстрыми насколько это возможно.</li></ul><p>Выбранное решение, хотя выглядит оно немного неуклюже:</p><ol><li>Примитивы остаются примитивами. Одно значение, как и хотелось.</li><li>Язык позволяет осуществлять доступ к методам и свойствам строк, чисел, булевых значений и символов.</li><li>Чтобы это работало, при таком доступе создаётся специальный «объект-обёртка», который предоставляет нужную функциональность, а после удаляется.</li></ol><p>Каждый примитив имеет свой собственный «объект-обёртку», которые называются: <code>String, Number, Boolean, Symbol и BigInt</code>. Таким образом, они имеют разный набор методов.</p><p>К примеру, существует метод <code>str.toUpperCase()</code>, который возвращает строку в верхнем регистре.</p><p>Вот, как он работает:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> str </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Привет'</span><span class='pun'>;</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'> str</span><span class='pun'>.</span><span class='pln'>toUpperCase</span><span class='pun'>()</span><span class='pln'> </span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// ПРИВЕТ</span></code></pre>",
+        "<p>Очень просто, не правда ли? Вот, что на самом деле происходит в  <code>str.toUpperCase()</code>:</p><ol><li>Строка <code>str</code> – примитив. В момент обращения к его свойству, создаётся специальный объект, который знает значение строки и имеет такие полезные методы, как <code>toUpperCase()</code>.</li><li>Этот метод запускается и возвращает новую строку (показывается в <code>alert</code>).</li><li>Специальный объект удаляется, оставляя только примитив <code>str</code>.</li></ol><p>Получается, что примитивы могут предоставлять методы, и в то же время оставаться «лёгкими».</p><p>Движок JavaScript сильно оптимизирует этот процесс. Он даже может пропустить создание специального объекта. Однако, он всё же должен придерживаться спецификаций и работать так, как будто он его создаёт.</p><p>Число имеет собственный набор методов. Например, <code>toFixed(n)</code>округляет число до n знаков после запятой.</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> num </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>1.23456</span><span class='pun'>;</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'> num</span><span class='pun'>.</span><span class='pln'>toFixed</span><span class='pun'>(</span><span class='lit'>2</span><span class='pun'>)</span><span class='pln'> </span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// 1.23</span></code></pre>",
+        "<p>Более подробно с различными свойствами и методами мы познакомимся в главах Числа и Строки.</p><div class='alert alert-warning' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Warning:'><path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/></svg><b>Конструкторы <code>String/Number/Boolean</code> предназначены только для внутреннего пользования</b></p><p>Некоторые языки, такие как Java, позволяют явное создание «объектов-обёрток» для примитивов при помощи такого синтаксиса как <code>new Number(1)</code> или <code> new Boolean(false)</code>.</p><p>В JavaScript, это тоже возможно по историческим причинам, но очень не рекомендуется. В некоторых местах последствия могут быть катастрофическими.</p><p>Например:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='pln'>alert</span><span class='pun'>(</span><span class='pln'> </span><span class='kwd'>typeof</span><span class='pln'> </span><span class='lit'>0</span><span class='pln'> </span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// 'число'</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'> </span><span class='kwd'>typeof</span><span class='pln'> </span><span class='kwd'>new</span><span class='pln'> </span><span class='typ'>Number</span><span class='pun'>(</span><span class='lit'>0</span><span class='pun'>)</span><span class='pln'> </span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// 'object'!</span></code></pre>",
+        "<p>Объекты в <code>if</code> всегда дают <code>true</code>, так что в нижеприведённом примере будет показан <code>alert</code>:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> zero </span><span class='pun'>=</span><span class='pln'> </span><span class='kwd'>new</span><span class='pln'> </span><span class='typ'>Number</span><span class='pun'>(</span><span class='lit'>0</span><span class='pun'>);</span><span class='pln'></span>",
+        "<span class='kwd'>if</span><span class='pln'> </span><span class='pun'>(</span><span class='pln'>zero</span><span class='pun'>)</span><span class='pln'> </span><span class='pun'>{</span><span class='pln'></span>",
+        "<span class='com'>  // zero возвращает 'true', так как является объектом</span>",
+        "<span class='pln'>  alert</span><span class='pun'>(</span><span class='pln'> </span><span class='str'>'zero имеет «истинное» значение?!?'</span><span class='pln'> </span>",
+        "<span class='pun'>);</span><span class='pln'></span><span class='pun'>}</span></code></pre>",
+        "<p>С другой стороны, использование функций <code>String/Number/Boolean</code> без оператора <code>new</code> – вполне разумно и полезно. Они превращают значение в соответствующий примитивный тип: в строку, в число, в булевый тип.</p><p>К примеру, следующее вполне допустимо:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> num </span><span class='pun'>=</span><span class='pln'> </span><span class='typ'>Number</span><span class='pun'>(</span><span class='str'>'123'</span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// превращает строку в число</span></code></pre>",
+        "</div><div class='alert alert-warning' role='alert'><p><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Warning:'><path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/></svg><b>null/undefined не имеют методов</b></p><p>Особенные примитивы <code>null</code> и <code>undefined</code> являются исключениями. У них нет соответствующих «объектов-обёрток», и они не имеют никаких методов. В некотором смысле, они «самые примитивные».</p><p>Попытка доступа к свойствам такого значения возвратит ошибку:</p>",
+        "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> str </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Привет'</span><span class='pun'>;</span>",
+        "<span class='pln'>str</span><span class='pun'>.</span><span class='pln'>test </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>5</span><span class='pun'>;</span>",
+        "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>str</span><span class='pun'>.</span><span class='pln'>test</span><span class='pun'>);</span></code></pre>",
+        "</div><h2>Итого</h2><ul><li>Все примитивы, кроме <code>null</code> и <code>undefined</code>, предоставляют множество полезных методов. Мы познакомимся с ними поближе в следующих главах.</li><li>Формально эти методы работают с помощью временных объектов, но движки JavaScript внутренне очень хорошо оптимизируют этот процесс, так что их вызов не требует много ресурсов.</li></ul>"
       ]
     }
   ],
@@ -538,7 +565,6 @@
     {
       "category": "Основы JavaScript",
       "id": "1",
-      "name": "Тест: к главе 'Привет, мир!'",
       "questions": [
         {
           "id": "1",
@@ -660,17 +686,261 @@
           ]
         }
       ]
+    },
+    {
+      "category": "Основы JavaScript",
+      "id": "2",
+      "name": "Тест к главе 'Переменные'",
+      "questions": [
+        {
+          "id": "1",
+          "question": "Что такое переменная?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "Это название типа данных"
+            },
+            {
+              "id": "2",
+              "text": "Это «именованное хранилище» для данных"
+            }
+          ],
+          "rightAnswer": [
+            "2"
+          ]
+        },
+        {
+          "id": "2",
+          "question": "Что делает код <code>let message</code>?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "Запускает выполнение программы"
+            },
+            {
+              "id": "2",
+              "text": "Удаляет переменную"
+            },
+            {
+              "id": "3",
+              "text": "Объявляет переменную"
+            },
+            {
+              "id": "4",
+              "text": "Присваивает переменной значение"
+            }
+          ],
+          "rightAnswer": [
+            "3"
+          ]
+        },
+        {
+          "id": "3",
+          "question": "Что делает код <code>message = 'Hello'</code>?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "Объявляет переменную"
+            },
+            {
+              "id": "2",
+              "text": "Присваивает переменной значение"
+            },
+            {
+              "id": "3",
+              "text": "Удаляет переменную"
+            },
+            {
+              "id": "4",
+              "text": "Объявляет переменную и присваивает ей значение"
+            }
+          ],
+          "rightAnswer": [
+            "2"
+          ]
+        },
+        {
+          "id": "4",
+          "question": "Какие ключевые слова могут быть использованы для объявления переменной?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "let"
+            },
+            {
+              "id": "2",
+              "text": "var"
+            },
+            {
+              "id": "3",
+              "text": "per"
+            },
+            {
+              "id": "4",
+              "text": "const"
+            }
+          ],
+          "rightAnswer": [
+            "1", "2", "4"
+          ]
+        },
+        {
+          "id": "5",
+          "question": "Может ли переменная объявленная через let  быть объявлена повторно?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "Да, может"
+            },
+            {
+              "id": "2",
+              "text": "Нет, это вызовет ошибку"
+            }
+          ],
+          "rightAnswer": [
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Типы данных",
+      "id": "3",
+      "name": "Тест к главе 'Методы примитивов'",
+      "questions": [
+        {
+          "id": "1",
+          "question": "Сколько примитивных типов есть в javascript?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "3"
+            },
+            {
+              "id": "2",
+              "text": "6"
+            },
+            {
+              "id": "3",
+              "text": "7"
+            },
+            {
+              "id": "4",
+              "text": "9"
+            }
+          ],
+          "rightAnswer": [
+            "3"
+          ]
+        },
+        {
+          "id": "2",
+          "question": "Какие из перечисленных типов относятся к примитивным?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "string"
+            },
+            {
+              "id": "2",
+              "text": "object"
+            },
+            {
+              "id": "3",
+              "text": "null"
+            },
+            {
+              "id": "4",
+              "text": "function"
+            }
+          ],
+          "rightAnswer": [
+            "1", "3"
+          ]
+        },
+        {
+          "id": "3",
+          "question": "Почему у примитивных типов есть методы?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "Потому, что примитивный тип это тоже объект"
+            },
+            {
+              "id": "2",
+              "text": "Потому, что каждый примитив имеет свой собственный «объект-обёртку»"
+            },
+            {
+              "id": "3",
+              "text": "Потмоу, что у объекта есть методы и их можно использовать для работы с примитивными типами"
+            },
+            {
+              "id": "4",
+              "text": "У примитивных типов нет методов для работы с ними"
+            }
+          ],
+          "rightAnswer": [
+            "2"
+          ]
+        },
+        {
+          "id": "4",
+          "question": "Что делает метод <code>str.toUpperCase()</code>?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "Возвращает строку в верхнем регистре"
+            },
+            {
+              "id": "2",
+              "text": "Возвращает часть строки"
+            },
+            {
+              "id": "3",
+              "text": "Возвращает строку в нижнем регистре"
+            },
+            {
+              "id": "4",
+              "text": "Возвращает строку, у которой первый символ будет в верхнем регистре"
+            }
+          ],
+          "rightAnswer": [
+            "1"
+          ]
+        },
+        {
+          "id": "5",
+          "question": "Допустимо ли явное создание «объектов-обёрток» для примитивов при помощи такого синтаксиса как new Number(1) или new Boolean(false)?",
+          "answers": [
+            {
+              "id": "1",
+              "text": "Да"
+            },
+            {
+              "id": "2",
+              "text": "Это возможно, но очень не рекомендуется"
+            },
+            {
+              "id": "3",
+              "text": "Нет"
+            }
+          ],
+          "rightAnswer": [
+            "2"
+          ]
+        }
+      ]
     }
   ],
   "tasks": [
     {
       "category": "Основы JavaScript",
       "id": "1",
-      "name": "Задачи: Привет, мир!",
+      "name": "Задачи к главе 'Привет, мир!'",
       "list": [
         {
           "content": [
-            "<h2>Вызвать alert</h2><p>Создайте страницу, которая отобразит сообщение «Я JavaScript!».</p><p>Выполните это задание в песочнице, либо на вашем жёстком диске, где – неважно, главное – проверьте, что она работает.</p><a href='https://ru.js.cx/task/hello-alert/solution/'>Демо в новом окне</a>"
+            "<h2>Вызвать alert</h2><p>Создайте страницу, которая отобразит сообщение «Я JavaScript!».</p><p>Выполните это задание в песочнице, либо на вашем жёстком диске, где – неважно, главное – проверьте, что она работает.</p><a href='https://ru.js.cx/task/hello-alert/solution/' target='_blank'>Демо в новом окне</a>"
           ],
           "solution": [
             "<a href='https://plnkr.co/edit/VJWJ5AN62rVfGUds?p=preview'>Открыть решение в песочнице.</a>"
@@ -692,15 +962,68 @@
           ]
         }
       ]
-    }
-  ],
-  "comments": [
+    },
     {
-      "id": "1",
-      "lesson": "1",
-      "user": "1",
-      "content": "Текст комментария"
-    }
+      "category": "Основы JavaScript",
+      "id": "2",
+      "name": "Задачи к главе 'Переменные'",
+      "list": [
+        {
+          "content": [
+            "<ol><li>Объявите две переменные: <code>admin</code> и <code>name</code>.</li><li>Запишите строку <code>'Джон'</code >в переменную <code>name</code>.</li><li>Скопируйте значение из переменной <code>name</code> в <code>admin</code>.</li><li>Выведите на экран значение <code>admin</code>, используя функцию <code>alert</code>(должна показать «Джон»).</li></ol>"
+          ],
+          "solution": [
+            "<p>В коде ниже каждая строка решения соответствует одному элементу в списке задач.</p>",
+            "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> admin</span><span class='pun'>,</span><span class='pln'> name</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// можно объявить две переменные через запятую</span>",
+            "<span class='pln'>name </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Джон'</span><span class='pun'>;</span>",
+            "<span class='pln'>admin </span><span class='pun'>=</span><span class='pln'> name</span><span class='pun'>;</span>",
+            "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'> admin </span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// 'Джон'</span></code></pre>"
+          ]
+        },
+        {
+          "content": [
+            "<ol><li>Создайте переменную для названия нашей планеты. Как бы вы её назвали?</li><li>Создайте переменную для хранения имени текущего посетителя сайта. Как бы вы назвали такую переменную?</li></ol>"
+          ],
+          "solution": [
+            "<code>let ourPlanetName = 'Земля';</code><p>Обратите внимание, мы могли бы использовать короткое имя<code>planet</code>, но тогда будет непонятно, о какой планете мы говорим. Лучше описать содержимое переменной подробнее, по крайней мере, до тех пор, пока имя переменной неСтанетСлишкомДлинным.</p><code>let currentUserName = 'Джон';</code><p>Опять же, мы могли бы укоротить название до<code>userName</code>, если мы точно знаем, что это текущий пользователь.</p><p>Современные редакторы и автодополнение ввода в них позволяют легко писать длинные названия переменных. Не экономьте буквы. Имена, состоящие из трёх слов, вполне нормальны.</p><p>Если в вашем редакторе нет автодополнения, воспользуйтесь другими.</p>"
+          ]
+        },
+        {
+          "content": [
+            "<p>Рассмотрим следующий код:</p>",
+            "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>const</span><span class='pln'> birthday </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'18.04.1982'</span><span class='pun'>;</span><span class='pln'></span>",
+            "<span class='kwd'>const</span><span class='pln'> age </span><span class='pun'>=</span><span class='pln'> someCode</span><span class='pun'>(</span><span class='pln'>birthday</span><span class='pun'>);</span></code></pre>",
+            "<p>У нас есть константа <code>birthday</code>, а также <code>age</code>, которая вычисляется при помощи некоторого кода, используя значение из <code>birthday</code> (в данном случае детали не имеют значения, поэтому код не рассматривается).</p><p>Можно ли использовать заглавные буквы для имени <code>birthday</code>? А для <code>age</code>? Или одновременно для обеих переменных?</p>"
+          ],
+          "solution": [
+            "<p>Обычно мы используем буквы в верхнем регистре для констант, которые «жёстко закодированы». Или, другими словами, когда значение известно до выполнения скрипта и записывается непосредственно в код.</p><p>В нашем примере, <code>birthday</code> именно такая переменная. Поэтому мы можем использовать заглавные буквы.</p><p>В отличие от предыдущей, переменная <code>age</code> вычисляется во время выполнения скрипта. Сегодня у нас один возраст, а через год уже совсем другой. Она является константой, потому что не изменяется при выполнении кода. Но она является «менее константной», чем <code>birthday</code>: она вычисляется, поэтому мы должны сохранить её в нижнем регистре.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Типы данных",
+      "id": "3",
+      "name": "Задачи к главе 'Методы примитивов'",
+      "list": [
+        {
+          "content": [
+            "<p>Взгляните на следующий код:</p>",
+            "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> str </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Привет'</span><span class='pun'>;</span>",
+            "<span class='pln'>str</span><span class='pun'>.</span><span class='pln'>test </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>5</span><span class='pun'>;</span>",
+            "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>str</span><span class='pun'>.</span><span class='pln'>test</span><span class='pun'>);</span></code></pre>",
+            "<p>Как вы думаете, это сработает? Что выведется на экран?</p>"
+          ],
+          "solution": [
+            "<p>Попробуйте запустить код:</p>",
+            "<pre class='prettyprint prettyprinted' style=''><code><span class='kwd'>let</span><span class='pln'> str </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Привет'</span><span class='pun'>;</span>",
+            "<span class='pln'>str</span><span class='pun'>.</span><span class='pln'>test </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>5</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// (*)</span>",
+            "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>str</span><span class='pun'>.</span><span class='pln'>test</span><span class='pun'>);</span></code></pre>",
+            "<p>В зависимости от того, используете ли вы строгий режим (<code>use strict</code>) или нет, результат может быть:</p><ol><li><code>undefined</code> (без strict)</li><li>Ошибка (strict mode)</li></ol><p>Почему? Давайте посмотрим что происходит в строке кода, отмеченной (*):</p><ol><li>В момент обращения к свойству <code>str</code> создаётся «объект-обёртка».</li><li>В строгом режиме, попытка изменения этого объекта выдаёт ошибку.</li><li>Без строгого режима, операция продолжается, объект получает свойство <code>test</code>, но после этого он удаляется, так что на последней линии <code>str</code> больше не имеет свойства <code>test</code>.</li></ol><p><b>Данный пример наглядно показывает, что примитивы не являются объектами.</b></p><p>Они не могут хранить дополнительные данные.</p>"
+          ]
+        }
+      ]
+    } 
   ]
 }
 >>>>>>> ea4d4fcb63ab2c0b30ba9e2c471a72b4f838e03a
