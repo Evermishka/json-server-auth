@@ -29,34 +29,51 @@
       ]
     },
     {
-      "email": "evermishka@yandex.ru",
-      "password": "$2a$10$0DojFP8LaOq0UalEeLCNsOte6N.3o2MpK0DM33YPLJyrq4rVFkyPK",
-      "name": "Евгения",
-      "place": "lessons",
+      "email": "test7@email.com",
+      "password": "$2a$10$xkb3yEUO2Fl3l/OnlW8nmeapqt3VUwRm1RxddoyZwkTfycsXdE9O2",
+      "name": "Tot",
+      "place": "tasks",
       "done": {
         "lessons": [
           {
             "id": 1
-          },
-          {
-            "id": 1
-          },
-          {
-            "id": 1
-          },
-          {
-            "id": 2
-          },
-          {
-            "id": 1
-          },
-          {
-            "id": 1
-          },
-          {
-            "id": null
           }
         ],
+        "tests": [],
+        "tasks": [
+          {
+            "id": 1,
+            "list": [
+              1
+            ]
+          }
+        ]
+      },
+      "favourites": {
+        "lessons": [],
+        "tests": [],
+        "tasks": [
+          {
+            "id": 1
+          }
+        ]
+      },
+      "settings": {
+        "theme": false,
+        "animation": false,
+        "resetProgress": false,
+        "sound": true,
+        "volume": 0.47
+      },
+      "id": "bFh-zK3"
+    },
+    {
+      "email": "evermishka@yandex.ru",
+      "password": "$2a$10$WmrAKuTNlQTdkf9YGRhRa.74fYewwc.Q3tS1WMXKR3XXVLGj/RaxG",
+      "name": "",
+      "place": "lessons",
+      "done": {
+        "lessons": [],
         "tests": [],
         "tasks": []
       },
@@ -66,13 +83,14 @@
         "tasks": []
       },
       "settings": {
-        "theme": true,
+        "theme": false,
         "animation": false,
         "resetProgress": false,
         "sound": true,
-        "volume": 1
+        "volume": 0.4,
+        "isValid": false
       },
-      "id": "KyJGeC2"
+      "id": 2
     }
   ],
   "category": [
@@ -182,14 +200,19 @@
       ],
       "comments": [
         {
+          "id": 2,
+          "userName": "Tot",
+          "content": "Fantastic lesson!"
+        },
+        {
           "id": 1,
           "userName": "Опознанный Енот",
           "content": "Хороший урок. Спасибо!"
         },
         {
-          "id": 2,
+          "id": 3,
           "userName": "Tot",
-          "content": "Fantastic lesson!"
+          "content": "Nice"
         }
       ]
     },
@@ -371,7 +394,8 @@
             }
           ],
           "rightAnswer": [
-            1, 4
+            1,
+            4
           ]
         },
         {
@@ -438,7 +462,8 @@
             }
           ],
           "rightAnswer": [
-            2, 3
+            2,
+            3
           ]
         }
       ]
@@ -537,7 +562,9 @@
             }
           ],
           "rightAnswer": [
-            1, 2, 4
+            1,
+            2,
+            4
           ]
         },
         {
@@ -611,7 +638,8 @@
             }
           ],
           "rightAnswer": [
-            1, 3
+            1,
+            3
           ]
         },
         {
@@ -700,7 +728,8 @@
           ],
           "solution": [
             "<a href='https://plnkr.co/edit/VJWJ5AN62rVfGUds?p=preview'>Открыть решение в песочнице.</a>"
-          ]
+          ],
+          "complexity": 1
         },
         {
           "content": [
@@ -708,14 +737,15 @@
           ],
           "solution": [
             "<p>HTML-код:</p>",
-            "<pre class='prettyprint prettyprinted' style=''></pre><code><span class='dec'>&lt;!DOCTYPE html&gt;</span><span class='pln'></span>",
+            "<pre class='prettyprint prettyprinted' style=''><code><span class='dec'>&lt;!DOCTYPE html&gt;</span><span class='pln'></span>",
             "<span class='tag'>  &lt;html&gt;</span><span class='pln'></span>",
             "<span class='tag'>  &lt;body&gt;</span><span class='pln'></span>",
             "<span class='tag'>    &lt;script</span><span class='pln'> </span><span class='atn'>src</span><span class='pun'>=</span><span class='atv'>'alert.js'</span><span class='tag'>&gt;&lt;/script&gt;</span><span class='pln'></span>",
             "<span class='tag'>  &lt;/body&gt;</span><span class='pln'></span>",
             "<span class='tag'>  &lt;/html&gt;</span></code></pre>",
             "<p>Для файла <code>alert.js</code> в той же папке:</p>"
-          ]
+          ],
+          "complexity": 2
         }
       ]
     },
@@ -734,15 +764,17 @@
             "<span class='pln'>name </span><span class='pun'>=</span><span class='pln'> </span><span class='str'>'Джон'</span><span class='pun'>;</span>",
             "<span class='pln'>admin </span><span class='pun'>=</span><span class='pln'> name</span><span class='pun'>;</span>",
             "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'> admin </span><span class='pun'>);</span><span class='pln'> </span><span class='com'>// 'Джон'</span></code></pre>"
-          ]
+          ],
+          "complexity": 1
         },
         {
           "content": [
             "<ol><li>Создайте переменную для названия нашей планеты. Как бы вы её назвали?</li><li>Создайте переменную для хранения имени текущего посетителя сайта. Как бы вы назвали такую переменную?</li></ol>"
           ],
           "solution": [
-            "<code>let ourPlanetName = 'Земля';</code><p>Обратите внимание, мы могли бы использовать короткое имя<code>planet</code>, но тогда будет непонятно, о какой планете мы говорим. Лучше описать содержимое переменной подробнее, по крайней мере, до тех пор, пока имя переменной неСтанетСлишкомДлинным.</p><code>let currentUserName = 'Джон';</code><p>Опять же, мы могли бы укоротить название до<code>userName</code>, если мы точно знаем, что это текущий пользователь.</p><p>Современные редакторы и автодополнение ввода в них позволяют легко писать длинные названия переменных. Не экономьте буквы. Имена, состоящие из трёх слов, вполне нормальны.</p><p>Если в вашем редакторе нет автодополнения, воспользуйтесь другими.</p>"
-          ]
+            "<code>let ourPlanetName = 'Земля';</code><p>Обратите внимание, мы могли бы использовать короткое имя <code>planet</code>, но тогда будет непонятно, о какой планете мы говорим. Лучше описать содержимое переменной подробнее, по крайней мере, до тех пор, пока имя переменной неСтанетСлишкомДлинным.</p><code>let currentUserName = 'Джон';</code><p>Опять же, мы могли бы укоротить название до <code>userName</code>, если мы точно знаем, что это текущий пользователь.</p><p>Современные редакторы и автодополнение ввода в них позволяют легко писать длинные названия переменных. Не экономьте буквы. Имена, состоящие из трёх слов, вполне нормальны.</p><p>Если в вашем редакторе нет автодополнения, воспользуйтесь другими.</p>"
+          ],
+          "complexity": 2
         },
         {
           "content": [
@@ -753,7 +785,8 @@
           ],
           "solution": [
             "<p>Обычно мы используем буквы в верхнем регистре для констант, которые «жёстко закодированы». Или, другими словами, когда значение известно до выполнения скрипта и записывается непосредственно в код.</p><p>В нашем примере, <code>birthday</code> именно такая переменная. Поэтому мы можем использовать заглавные буквы.</p><p>В отличие от предыдущей, переменная <code>age</code> вычисляется во время выполнения скрипта. Сегодня у нас один возраст, а через год уже совсем другой. Она является константой, потому что не изменяется при выполнении кода. Но она является «менее константной», чем <code>birthday</code>: она вычисляется, поэтому мы должны сохранить её в нижнем регистре.</p>"
-          ]
+          ],
+          "complexity": 2
         }
       ]
     },
@@ -776,7 +809,8 @@
             "<span class='pln'>str</span><span class='pun'>.</span><span class='pln'>test </span><span class='pun'>=</span><span class='pln'> </span><span class='lit'>5</span><span class='pun'>;</span><span class='pln'> </span><span class='com'>// (*)</span>",
             "<span class='pln'>alert</span><span class='pun'>(</span><span class='pln'>str</span><span class='pun'>.</span><span class='pln'>test</span><span class='pun'>);</span></code></pre>",
             "<p>В зависимости от того, используете ли вы строгий режим (<code>use strict</code>) или нет, результат может быть:</p><ol><li><code>undefined</code> (без strict)</li><li>Ошибка (strict mode)</li></ol><p>Почему? Давайте посмотрим что происходит в строке кода, отмеченной (*):</p><ol><li>В момент обращения к свойству <code>str</code> создаётся «объект-обёртка».</li><li>В строгом режиме, попытка изменения этого объекта выдаёт ошибку.</li><li>Без строгого режима, операция продолжается, объект получает свойство <code>test</code>, но после этого он удаляется, так что на последней линии <code>str</code> больше не имеет свойства <code>test</code>.</li></ol><p><b>Данный пример наглядно показывает, что примитивы не являются объектами.</b></p><p>Они не могут хранить дополнительные данные.</p>"
-          ]
+          ],
+          "complexity": 2
         }
       ]
     }
